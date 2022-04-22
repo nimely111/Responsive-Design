@@ -1,53 +1,76 @@
-*{
+
+body{
     padding: 0;
     margin: 0;
-    box-sizing: border-box;
-}
-body{
-    margin: 30px auto;
     width: 90%;
-    height: auto;
-    font-size: 20px;
-    font-family: Arial, Helvetica, sans-serif;
-    background-color: #fff;
-}
-.container {
-    display: grid;
-    max-height: 960px;
-    width: 100%;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 10px;
-    grid-auto-rows: 100px;
-    grid-template-areas:
-      "header header header"
-      "advert content content"
-      "footer footer footer";
-}
-
-
-.header{
-grid-area:header;
-padding: 30px;
-font-size: 20px;
-}
-
-.sidebar{
-    grid-area: advert;
-    padding: 50px;
-}
-
-.main{
-    grid-area: content;
-}
-
-.footer{
-    grid-area: footer;
-
-}
-
-.grid-items{
-    background: #ccc;
-    padding: 20px;
-    /* text-align: center; */
-}
-
+    margin: 20px auto;
+    }
+    
+    .item{
+        background: LightGray;
+    }
+     .header {
+        grid-area: header;
+      }
+    
+      .advert {
+        grid-area: advert;
+      }
+      
+      .advert p{
+          text-align: center;
+      }
+    
+      .content {
+        grid-area: content;
+      }
+      
+      .content p{
+            text-align: center;
+      }
+    
+      .footer {
+        grid-area: footer;
+        text-align: center;
+      }
+    
+      .container {
+        font-size: 1.5em;
+        min-height: 550px;
+        width: 100%;
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: 50px auto 1fr auto;
+        grid-gap: 1em;
+        border-radius: 5px;
+        grid-template-areas:
+          "header"
+          "advert"
+          "content"
+          "footer";
+      }
+    
+    
+    
+    @media (min-width: 1200px){
+        .container{
+        grid-template-columns: 10em 1fr;
+        grid-template-rows: auto 1fr auto;
+          grid-template-areas:
+            "header header"
+            "advert content"
+            "advert footer";
+        }
+      } 
+      
+      
+      @media (min-width: 860px) and (max-width: 1199px){
+        .container{
+          grid-template-columns: auto 1fr;
+          grid-template-rows: auto 1fr auto;
+          grid-template-areas:
+            "advert header"
+            "advert content"
+            "advert footer";
+        }
+      }
