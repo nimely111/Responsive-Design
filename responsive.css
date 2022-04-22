@@ -21,7 +21,7 @@ body{
     grid-template-areas:
       "header header header"
       "advert content content"
-      "advert footer footer";
+      "footer footer footer";
 }
 
 
