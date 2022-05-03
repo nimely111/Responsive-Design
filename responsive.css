@@ -97,6 +97,7 @@ body{
   
   @media (min-width: 1200px){
       .container{
+        width: 100vw;
       grid-template-columns: 10em 1fr;
       grid-template-rows: auto 1fr auto;
         grid-template-areas:
@@ -109,6 +110,7 @@ body{
     
     @media (min-width: 100%) and (max-width: 100%){
       .container{
+        width: 100vw;
         grid-template-columns: auto 1fr;
         grid-template-rows: auto 1fr auto;
         grid-template-areas:
