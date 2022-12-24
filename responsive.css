@@ -92,8 +92,11 @@ body{
         "footer";
 
     }
-  
-  
+
+    .advert-flex{
+      display: flex;
+      justify-content: center;
+    }
   
   @media (min-width: 1200px){
       .container{
